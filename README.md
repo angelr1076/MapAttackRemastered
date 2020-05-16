@@ -14,11 +14,16 @@ Changes made:
 
 5. Cleaned up a lot of the HTML element names
 
-6. Added a .gitignore file to hide Google Map API key
+6. Added a .gitignore file to hide Google Maps API key
 
 If you'd like to clone the game, run "git clone "
 
 Install Node on your machine, you can do that from the command line or directly from [link to Node](https://nodejs.org/en/download/) . There are plenty of resources out there explaining how to install Node on your machine so I'll save myself some time and space here.
+
+You'll need to create a config.js file in your root folder with the following variables and function command:
+`let head = document.getElementsByTagName("head").item(0); let script = document.createElement("script"); script.setAttribute("type", "text/javascript"); script.setAttribute( "src", "<YOUR GOOGLE MAPS API KEY>" ); head.appendChild(script);`
+
+Remember to add your Google Maps API key, otherwise the site will not deploy and the map will not render.
 
 Once you clone the repository and install Node, you can run the game locally on a Node.js server by entering "npm run start" in the terminal.
 
