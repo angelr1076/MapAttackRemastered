@@ -14,6 +14,8 @@ Changes made:
 
 5. Cleaned up a lot of the HTML element names
 
+6. Added a .gitignore file to hide Google Map API key
+
 If you'd like to clone the game, run "git clone "
 
 Install Node on your machine, you can do that from the command line or directly from [link to Node](https://nodejs.org/en/download/) . There are plenty of resources out there explaining how to install Node on your machine so I'll save myself some time and space here.
