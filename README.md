@@ -21,5 +21,7 @@ Install Node on your machine, you can do that from the command line or directly 
 Once you clone the repository and install Node, you can run the game locally on a Node.js server by entering "npm run start" in the terminal.
 
 ![Game Image](./images/gamescreen.png)
+
 ![Mobile Image](./images/mobile.png)
+
 ![Tablet Image](./images/tablet.png)
