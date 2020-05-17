@@ -131,7 +131,7 @@ const initMap = country => {
     center: myLatLng,
     zoom: 3,
     disableDefaultUI: true,
-    mapTypeId: "satellite",
+    mapTypeId: "hybrid",
     heading: 90,
     tilt: 45,
     rotateControl: true,
@@ -210,4 +210,5 @@ const handleUserResponse = element => {
     }, 10000);
   }
 };
+
 fetchRestApi();
