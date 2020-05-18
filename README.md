@@ -22,7 +22,7 @@ If you'd like to clone the game, run "git clone https://github.com/angelr1076/Ma
 
 Install Node on your machine, you can do that from the command line or directly from [Node](https://nodejs.org/en/download/). There are plenty of resources out there explaining how to install Node on your machine so I'll save myself some time and space here. The game runs locally on a Node.js server (port 3000). 
 
-You'll need to create a config.js file in your root folder with the following variables and function command:
+You'll need to create a config.js file in your root folder with the following variables in order to dynamically insert the Google Maps API key into your header:
 `let head = document.getElementsByTagName("head").item(0); let script = document.createElement("script"); script.setAttribute("type", "text/javascript"); script.setAttribute( "src", "<YOUR GOOGLE MAPS API KEY>" ); head.appendChild(script);`
 
 Remember to add your Google Maps API key, otherwise the site will not deploy and the map will not render. If you don't already have an API key, go to [Google Maps API key site](https://developers.google.com/maps/documentation/javascript/get-api-key).
