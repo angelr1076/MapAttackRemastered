@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Map Attack Remastered</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="icon" href="./images/globe.png" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Map Attack Remastered</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+    <link rel="icon" href="./images/globe.png" type="image/x-icon" />
 </head>
-  <body>
+
+<body>
     <header>
-      <section id="flag-container" class="flag-container">
-        <img class="item-img" id="country-flag" src="" alt="flag" />
-      </section>
+        <section id="flag-container" class="flag-container">
+            <img class="item-img" id="country-flag" src="" alt="flag" />
+        </section>
     </header>
     <nav>
-      <ul class="container-nav">
-        <li><a href="index.html">Home</a></li>
-        <li class="game-title" id="logo"><a href="#">Map Attack!</a></li>
-        <li><a href="main.html">Replay</a></li>
-      </ul>
+        <ul class="container-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="game-title" id="logo"><a href="#">Map Attack!</a></li>
+            <li><a href="main.html">Replay</a></li>
+        </ul>
     </nav>
     <div class="container-main" id="container-main">
-      <section class="item map" id="map"></section>
-      <section class="item item-type-b" id="question"></section>
-      <section class="item item-type-b">
-        <form class="item item-type-b__inputs" id="inputs"></form>
-      </section>
-      <section class="item container-inner">
-        <section class="item-inner score" id="score"></section>
-        <section class="item-inner num-to-win" id="num-to-win"></section>
-        <section class="item-inner wrong-answers" id="wrong-answers"></section>
-        <section class="item-inner guesses-left" id="guesses-left"></section>
-      </section>
-      <section class="countries-no-display">
-        <select id="countries"></select>
-        <section id="population"></section>
-        <section id="currencies"></section>
-        <section id="languages"></section>
-      </section>
+        <section class="item map" id="map"></section>
+        <section class="item item-type-b" id="question"></section>
+        <section class="item item-type-b">
+            <form class="item item-type-b__inputs" id="inputs"></form>
+        </section>
+        <section class="item container-inner">
+            <section class="item-inner score" id="score"></section>
+            <section class="item-inner num-to-win" id="num-to-win"></section>
+            <section class="item-inner wrong-answers" id="wrong-answers"></section>
+            <section class="item-inner guesses-left" id="guesses-left"></section>
+        </section>
+        <section class="countries-no-display">
+            <select id="countries"></select>
+            <section id="population"></section>
+            <section id="currencies"></section>
+            <section id="languages"></section>
+        </section>
     </div>
     <footer>
-      <section id="game-end"></section>
+        <section id="game-end"></section>
     </footer>
 
     <audio src="sounds/answer-right.mp3" id="answer-right"></audio>
@@ -54,7 +52,8 @@
     <audio src="sounds/game-win.mp3" id="game-win" loop="loop"></audio>
     <audio src="sounds/game-loss.mp3" id="game-loss" loop="loop"></audio>
 
-     <script src="config.js"></script>
+    <script src="config.js" async defer></script>
     <script src="js/main.js" async defer></script>
-  </body>
+</body>
+
 </html>
