@@ -189,6 +189,8 @@ const handleUserResponse = element => {
       gameWin.play();
       containerMain.style.display = 'none';
       gameEnd.innerHTML = 'You won! You actually beat Map Attack?!!!';
+      gameEnd.style.backgroundColor = '#5585b5';
+      gameEnd.style.color = '#fff';
       setTimeout(function () {
         window.location.replace('index.html');
       }, 9500);

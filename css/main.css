@@ -1,13 +1,13 @@
 :root {
   --montserrat-font: "Montserrat", sans-serif;
-  --soft-blue: #348bd8;
-  --pomegranate: #d62d71;
+  --gray-blue: #5585b5;
+  --pomegranate: #f95959;
   --black: #000;
   --white: #fff;
   --charcoal: #444;
   --key-lime: #4c4;
   --lime-light: #bfb;
-  --melon: #14db92;
+  --soft-blue: #53a8b6;
 }
 
 html {
@@ -33,7 +33,7 @@ nav {
 
 header,
 footer {
-  background-color: var(--soft-blue);
+  background-color: var(--gray-blue);
 }
 
 section {
@@ -129,7 +129,7 @@ li a {
 
 .item-inner {
   padding: 25px 0;
-  background-color: var(--melon);
+  background-color: var(--soft-blue);
   color: var(--white);
 }
 
@@ -161,6 +161,10 @@ li a {
 
 .item-inner {
   grid-column: span 3;
+}
+
+.sig {
+  color: var(--white);
 }
 
 @media screen and (max-width: 450px) {
