@@ -55,7 +55,6 @@ const displayCountryInfo = countryAlphaCode => {
     .filter(l => l)
     .map(l => `${l}`)
     .join(', ');
-  console.log(languages);
   // Get length of languages array for plural variable
   languagesLength = languages.split(' ').length;
   capital = countryData.capital;
@@ -112,14 +111,12 @@ const generateAnswers = (answer, allCountries) => {
         name: randomAnswer.name.common,
         cca2: randomAnswer.cca2,
       });
-      // console.log(answers);
       let input = document.querySelector('#inputs');
       input.innerHTML =
         input.innerHTML +
         `<label class='answers'> <input id='choice${i}' name='countries' type='radio' onchange='handleUserResponse(this)' value='${answers[i].name}'/> ${answers[i].name}`;
     }
   }
-  console.log(answers);
   return answers;
 };
 
