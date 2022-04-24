@@ -188,7 +188,7 @@ const handleUserResponse = element => {
     if (score === 5) {
       gameWin.play();
       containerMain.style.display = 'none';
-      gameEnd.innerHTML = 'You won! You actually beat Map Attack?!!!';
+      gameEnd.innerHTML = '<h2>You won! You actually beat Map Attack?!!!</h2)';
       gameEnd.style.backgroundColor = '#5585b5';
       gameEnd.style.color = '#fff';
       setTimeout(function () {

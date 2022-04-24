@@ -70,6 +70,10 @@ li a {
   background: var(--pomegranate);
 }
 
+.game-title {
+  font-size: 1.5em;
+}
+
 .world-img {
   width: 100%;
   height: auto;
