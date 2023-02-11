@@ -12,6 +12,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "negotiator": "^0.6.2",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.20"
   }
 }
