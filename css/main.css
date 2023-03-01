@@ -197,7 +197,7 @@ li a {
 
 @media screen and (min-width: 600px) {
   body {
-    width: 80vw;
+    width: 70vw;
     margin: 0 auto;
   }
 
@@ -205,16 +205,26 @@ li a {
     grid-auto-flow: column;
   }
 
+  .item {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+
   .item-type-b {
     grid-column: span 3;
   }
 
   .item-inner {
-    grid-column: span 1;
+    grid-column: span 4;
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1300px) {
+  body {
+    width: 60vw;
+    margin: 0 auto;
+  }
+
   .container-main {
     grid-auto-flow: column;
   }
