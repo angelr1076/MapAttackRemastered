@@ -1,9 +1,10 @@
 :root {
-  --montserrat-font: "Montserrat", sans-serif;
+  --montserrat-font: 'Montserrat', sans-serif;
   --gray-blue: #5585b5;
   --pomegranate: #f95959;
   --black: #000;
   --white: #fff;
+  --offwhite: #faf9f6;
   --charcoal: #444;
   --key-lime: #4c4;
   --lime-light: #bfb;
@@ -17,7 +18,7 @@ html {
 body {
   text-align: center;
   font-family: var(--montserrat-font);
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 header,
@@ -33,7 +34,9 @@ nav {
 
 header,
 footer {
-  background-color: var(--gray-blue);
+  background-color: var(--offwhite);
+  border: 4px solid var(--black);
+  border-radius: 5px;
 }
 
 section {
@@ -41,7 +44,9 @@ section {
 }
 
 nav li {
-  background-color: var(--pomegranate);
+  background-color: var(--offwhite);
+  border: 4px solid var(--black);
+  border-radius: 5px;
   padding: 10px;
 }
 
@@ -52,7 +57,7 @@ nav ul {
 }
 
 li a {
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -66,12 +71,8 @@ li a {
   opacity: 0;
 }
 
-.logo {
-  background: var(--pomegranate);
-}
-
 .game-title {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .world-img {
@@ -96,6 +97,7 @@ li a {
   padding: 20px;
   color: var(--white);
   background-color: var(--pomegranate);
+  border-radius: 5px;
 }
 
 .item-type-b__inputs {
@@ -103,7 +105,7 @@ li a {
   color: var(--white);
 }
 
-.item-type-b__inputs input[type="radio"] {
+.item-type-b__inputs input[type='radio'] {
   opacity: 0;
   position: fixed;
 }
@@ -117,12 +119,12 @@ li a {
   border-radius: 4px;
 }
 
-.item-type-b__inputs input[type="radio"]:checked + label {
+.item-type-b__inputs input[type='radio']:checked + label {
   background-color: var(--lime-light);
   border-color: var(--key-lime);
 }
 
-.item-type-b__inputs input[type="radio"]:focus + label {
+.item-type-b__inputs input[type='radio']:focus + label {
   border: 2px dashed var(--charcoal);
 }
 
@@ -135,23 +137,25 @@ li a {
   padding: 25px 0;
   background-color: var(--soft-blue);
   color: var(--white);
+  border-radius: 5px;
 }
 
 .item-img {
   width: 250px;
+  height: 150px;
 }
 
 .container-main {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px;
+  grid-gap: 5px;
 }
 
 .container-inner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: fixed;
-  grid-gap: 10px;
+  grid-gap: 5px;
 }
 
 .container-nav {
@@ -168,7 +172,8 @@ li a {
 }
 
 .sig {
-  color: var(--white);
+  color: var(--black);
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 450px) {
@@ -188,7 +193,7 @@ li a {
 
 @media screen and (min-width: 600px) {
   body {
-    width: 80%;
+    width: 80vw;
     margin: 0 auto;
   }
 
