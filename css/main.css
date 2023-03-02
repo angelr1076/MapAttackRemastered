@@ -19,6 +19,7 @@ body {
   text-align: center;
   font-family: var(--montserrat-font);
   font-size: 1.5em;
+  /* height: 100vh; */
 }
 
 footer {
@@ -36,20 +37,20 @@ nav {
 
 .flag-container {
   background-color: var(--offwhite);
-  border: 3px solid var(--black);
+  border: 2px solid var(--black);
   border-radius: 5px;
   padding: 1.5em;
 }
 
 footer {
   background-color: var(--offwhite);
-  border: 3px solid var(--black);
+  border: 2px solid var(--black);
   border-radius: 5px;
 }
 
 nav li {
   background-color: var(--offwhite);
-  border: 3px solid var(--black);
+  border: 2px solid var(--black);
   border-radius: 5px;
   padding: 10px;
 }
