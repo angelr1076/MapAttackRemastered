@@ -19,32 +19,28 @@ body {
   text-align: center;
   font-family: var(--montserrat-font);
   font-size: 1.5em;
-  /* height: 100vh; */
 }
 
 footer {
   padding: 25px 0;
 }
 
-header {
-  margin: 2em 0 1em 0;
-}
-
 footer,
 nav {
-  margin: 0.5em 0;
+  margin: 0.3em 0;
 }
 
 .flag-container {
-  background-color: var(--offwhite);
-  border: 2px solid var(--black);
+  background-color: var(--gray-blue);
+  border: 3px solid var(--black);
   border-radius: 5px;
   padding: 1.5em;
+  margin: 0.5em 0;
 }
 
 footer {
-  background-color: var(--offwhite);
-  border: 2px solid var(--black);
+  background-color: var(--gray-blue);
+  border: 3px solid var(--black);
   border-radius: 5px;
 }
 
@@ -177,7 +173,7 @@ li a {
 }
 
 .sig {
-  color: var(--black);
+  color: var(--white);
   font-size: 2rem;
 }
 
