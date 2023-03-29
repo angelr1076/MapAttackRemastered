@@ -1,5 +1,7 @@
 # Map Attack Remastered
 
+[Play Map Attack](https://mapattackre.netlify.app/)
+
 ### Here's a remastered version of one of my original boot-camp projects named "Map Attack"
 
 Play the live version here [play game](https://mapattackre.netlify.app/).
