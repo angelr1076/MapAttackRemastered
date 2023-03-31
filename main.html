@@ -11,6 +11,7 @@
     <link rel="icon" href="./images/globe.png" type="image/x-icon" />
 </head>
 <body>
+    <div class="container">
     <header>
         <div id="flag-container" class="flag-container">
             <img class="item-img" id="country-flag" src="" alt="flag" />
@@ -18,22 +19,21 @@
     </header>
     <nav>
         <ul class="container-nav">
-            <li><a href="index.html">Home</a></li>
-            <li class="game-title" id="logo">Map Attack!</li>
-            <li><a href="main.html">Replay</a></li>
+            <li class="home"><a href="index.html">Home</a></li>
+            <li class="replay"><a href="main.html">Replay</a></li>
         </ul>
     </nav>
     <div class="container-main" id="container-main">
         <div class="item map" id="map"></div>
-        <div class="item item-type-b" id="question"></div>
-        <div class="item item-type-b">
-            <form class="item item-type-b__inputs" id="inputs"></form>
-        </div>
         <div class="item container-inner">
             <div class="item-inner score" id="score"></div>
             <div class="item-inner num-to-win" id="num-to-win"></div>
             <div class="item-inner wrong-answers" id="wrong-answers"></div>
             <div class="item-inner guesses-left" id="guesses-left"></div>
+        </div>
+        <div class="item item-type-b" id="question"></div>
+        <div class="item item-type-b">
+            <form class="item item-type-b__inputs" id="inputs"></form>
         </div>
         <div class="countries-no-display">
             <select id="countries"></select>
@@ -46,6 +46,7 @@
         <div id="game-end">
             <footer class="sig">Map Attack &#169;</footer>
         </div>
+    </div>
     </div>
 
     <audio src="sounds/answer-right.mp3" id="answer-right"></audio>

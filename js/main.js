@@ -188,6 +188,8 @@ const handleUserResponse = element => {
       gameEnd.innerHTML = '<h2>You won! You actually beat Map Attack?!!!</h2)';
       gameEnd.style.backgroundColor = '#5585b5';
       gameEnd.style.color = '#fff';
+      gameEnd.style.padding = '20px';
+      gameEnd.style.borderRadius = '0 0 5px 5px';
       setTimeout(function () {
         window.location.replace('index.html');
       }, 9500);
@@ -209,6 +211,9 @@ const handleUserResponse = element => {
     containerMain.style.display = 'none';
     gameEnd.innerHTML = '<h2>Map Attack beat you! Try again 😟<h2>';
     gameEnd.style.backgroundColor = '#f95959';
+    gameEnd.style.color = '#fff';
+    gameEnd.style.padding = '20px';
+    gameEnd.style.borderRadius = '0 0 5px 5px';
     setTimeout(function () {
       window.location.replace('index.html');
     }, 10000);
