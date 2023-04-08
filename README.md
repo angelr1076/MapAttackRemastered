@@ -4,8 +4,6 @@
 
 ### Here's a remastered version of one of my original boot-camp projects named "Map Attack"
 
-Play the live version here [play game](https://mapattackre.netlify.app/).
-
 Changes made:
 
 1. Broke functions down into separate pieces (initially this was all one function that fired first-class functions)
