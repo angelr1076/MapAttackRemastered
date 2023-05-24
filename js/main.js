@@ -220,4 +220,11 @@ const handleUserResponse = element => {
   }
 };
 
+window.onload = () => {
+  let radioButtons = document.querySelectorAll("input[type='radio']");
+  radioButtons.forEach(radio => {
+    radio.checked = false;
+  });
+};
+
 fetchRestApi();
