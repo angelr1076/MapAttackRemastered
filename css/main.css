@@ -139,6 +139,11 @@ li a {
   cursor: pointer;
 }
 
+input[type='radio']:focus,
+input[type='radio']:active {
+  outline: none;
+}
+
 .item-inner {
   grid-column: span 3;
 

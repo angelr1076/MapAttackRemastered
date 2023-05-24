@@ -199,7 +199,7 @@ const handleUserResponse = element => {
     wrongAnswers++;
     wrongAnswer.play();
     guesses.innerHTML = `You destroyed ${wrongAnswers} ${plurality}.`;
-    question.innerHTML = `<h2>The correct answer is ${selectedCountry}.<h2>`;
+    question.innerHTML = `The correct answer is ${selectedCountry}.`;
     guessesLeft.innerHTML = `Get ${3 - wrongAnswers} more wrong and you lose.`;
     setTimeout(function () {
       fetchRestApi();
