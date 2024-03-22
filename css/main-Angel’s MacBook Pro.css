@@ -11,6 +11,18 @@
   --soft-blue: #53a8b6;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -24,7 +36,7 @@ body {
 }
 
 footer {
-  padding: 25px 0;
+  padding: 15px 0;
 }
 
 .container {
@@ -59,11 +71,18 @@ nav ul {
 
 li a {
   color: var(--white);
+}
+
+.container-nav li a {
   text-decoration: none;
 }
 
 .inactive {
   opacity: 0;
+}
+
+.logo {
+  border-radius: 5px;
 }
 
 .home {
@@ -94,7 +113,7 @@ li a {
 }
 
 .item {
-  padding: 0;
+  padding: 5px;
   background-color: var(--white);
 }
 
@@ -102,7 +121,6 @@ li a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 20px;
   color: var(--white);
   background-color: var(--pomegranate);
 }
@@ -119,10 +137,20 @@ li a {
 
 .item-type-b__inputs label {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.8em;
-  padding: 10px 20px;
-  margin: 5px;
+  padding: 5px;
   border: 2px solid var(--white);
+  border-radius: 5px;
+}
+
+.answers {
+  height: 30px;
+}
+
+.answers:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .item-type-b__inputs input[type='radio']:checked + label {
@@ -142,10 +170,10 @@ li a {
 .item-inner {
   grid-column: span 3;
 
-  padding: 2em;
+  padding: 1em;
   background-color: var(--soft-blue);
   color: var(--white);
-  border-bottom: 2px solid var(--white);
+  height: 50px;
 }
 
 .guesses-left {
@@ -168,6 +196,7 @@ li a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: fixed;
+  background-color: #53a8b6;
 }
 
 .container-nav {
@@ -196,6 +225,10 @@ li a {
 
   .item-type-b__inputs label {
     font-size: 1rem;
+  }
+
+  .item-inner {
+    font-size: 12px;
   }
 }
 

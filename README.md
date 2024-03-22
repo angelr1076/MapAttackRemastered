@@ -18,9 +18,9 @@ Changes made:
 
 6. Added a .gitignore file to hide Google Maps API key
 
-If you'd like to clone the game, run "git clone https://github.com/angelr1076/MapAttackRemastered.git" in the terminal. 
+If you'd like to clone the game, run "git clone https://github.com/angelr1076/MapAttackRemastered.git" in the terminal.
 
-Install Node on your machine, you can do that from the command line or directly from [Node](https://nodejs.org/en/download/). There are plenty of resources out there explaining how to install Node on your machine so I'll save myself some time and space here. The game runs locally on a Node.js server (port 3000). 
+Install Node on your machine, you can do that from the command line or directly from [Node](https://nodejs.org/en/download/). There are plenty of resources out there explaining how to install Node on your machine so I'll save myself some time and space here. The game runs locally on a Node.js server (port 3000).
 
 You'll need to create a config.js file in your root folder with the following variables in order to dynamically insert the Google Maps API key into your header:
 `let head = document.getElementsByTagName("head").item(0); let script = document.createElement("script"); script.setAttribute("type", "text/javascript"); script.setAttribute( "src", "<YOUR GOOGLE MAPS API KEY>" ); head.appendChild(script);`
