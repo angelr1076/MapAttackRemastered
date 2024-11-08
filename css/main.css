@@ -2,8 +2,7 @@
   --montserrat-font: 'Montserrat', sans-serif;
   --gray-blue: #5585b5;
   --pomegranate: #f95959;
-  --pomegranate-light: #f86969;
-  --black: #000;
+  --pomegranate-light: #fa7c7c;
   --white: #fff;
   --offwhite: #faf9f6;
   --charcoal: #444;
@@ -38,7 +37,7 @@ body {
 }
 
 footer {
-  background-color: var(--soft-blue);
+  background-color: var(--charcoal);
   border-radius: 0 0 5px 5px;
   padding: 25px 0;
 }
