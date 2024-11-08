@@ -2,6 +2,7 @@
   --montserrat-font: 'Montserrat', sans-serif;
   --gray-blue: #5585b5;
   --pomegranate: #f95959;
+  --pomegranate-light: #f86969;
   --black: #000;
   --white: #fff;
   --offwhite: #faf9f6;
@@ -23,10 +24,6 @@ body {
   background-color: var(--offwhite);
 }
 
-footer {
-  padding: 25px 0;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -35,14 +32,15 @@ footer {
 }
 
 .flag-container {
-  background-color: var(--gray-blue);
+  background-color: var(--charcoal);
   padding: 1.5em;
   border-radius: 5px 5px 0 0;
 }
 
 footer {
-  background-color: var(--gray-blue);
+  background-color: var(--soft-blue);
   border-radius: 0 0 5px 5px;
+  padding: 25px 0;
 }
 
 nav li {
@@ -77,6 +75,7 @@ li a {
   border-top: 2px solid var(--white);
   border-bottom: 2px solid var(--white);
 }
+
 .replay {
   border-top: 2px solid var(--white);
   border-left: 2px solid var(--white);
@@ -125,17 +124,8 @@ li a {
   border: 2px solid var(--white);
 }
 
-.item-type-b__inputs input[type='radio']:checked + label {
-  background-color: var(--lime-light);
-  border-color: var(--key-lime);
-}
-
-.item-type-b__inputs input[type='radio']:focus + label {
-  border: 2px dashed var(--charcoal);
-}
-
 .item-type-b__inputs label:hover {
-  background-color: var(--charcoal);
+  background-color: var(--pomegranate-light);
   cursor: pointer;
 }
 
@@ -143,9 +133,8 @@ li a {
   grid-column: span 3;
 
   padding: 2em;
-  background-color: var(--soft-blue);
+  background-color: var(--charcoal);
   color: var(--white);
-  border-bottom: 2px solid var(--white);
 }
 
 .guesses-left {
