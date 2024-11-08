@@ -193,6 +193,10 @@ li a {
     margin: 0 auto;
   }
 
+  .container {
+    height: auto;
+  }
+
   .container-nav {
     grid-auto-flow: column;
   }
@@ -200,6 +204,10 @@ li a {
   .item {
     grid-column: span 3;
     grid-row: span 3;
+  }
+
+  .item-type-b__inputs label {
+    font-size: 1rem;
   }
 
   .item-type-b {
