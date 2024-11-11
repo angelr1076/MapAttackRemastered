@@ -15,6 +15,11 @@ html {
   font-size: 62.5%;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   text-align: center;
   font-family: var(--montserrat-font);
@@ -173,13 +178,31 @@ li a {
 
 @media screen and (max-width: 600px) {
   .flag-container {
-    display: none;
     visibility: hidden;
+    height: 0;
+  }
+
+  .container-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
   }
 
   .home,
   .replay {
-    border: 2px solid var(--white);
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 4px;
+    background-color: var(--pomegranate);
+    color: var(--white);
+  }
+
+  li a {
+    color: var(--white);
+    text-decoration: none;
   }
 
   .item-type-b__inputs label {
