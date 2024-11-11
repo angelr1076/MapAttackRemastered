@@ -21,18 +21,43 @@ nav {
 }
 
 body {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
   font-family: var(--montserrat-font);
   font-size: 1.5em;
-  height: 100vh;
   background-color: var(--offwhite);
+}
+
+.container-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/map-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  text-align: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  width: 90vw;
+}
+
+.container>* {
+  width: 100%;
+  margin-bottom: 2px;
 }
 
 .flag-container {
@@ -48,7 +73,6 @@ footer {
 }
 
 nav li {
-  background-color: var(--pomegranate);
   color: var(--white);
   padding: 10px;
 }
@@ -68,10 +92,9 @@ li a {
   opacity: 0;
 }
 
-.home {
-  border-top: 2px solid var(--white);
-  border-right: 2px solid var(--white);
-  border-bottom: 2px solid var(--white);
+.home,
+.logo {
+  background-color: var(--pomegranate);
 }
 
 .game-title {
@@ -81,9 +104,7 @@ li a {
 }
 
 .replay {
-  border-top: 2px solid var(--white);
-  border-left: 2px solid var(--white);
-  border-bottom: 2px solid var(--white);
+  background-color: var(--pomegranate);
 }
 
 .world-img {
@@ -177,26 +198,25 @@ li a {
 }
 
 @media screen and (max-width: 600px) {
-  .flag-container {
-    visibility: hidden;
-    height: 0;
+  .container>* {
+    margin: 0;
   }
 
   .container-nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
+    background-color: var(--charcoal);
   }
 
   .home,
   .replay {
-    display: inline-block;
+    display: flex;
     padding: 8px 12px;
     margin: 5px;
-    border-radius: 4px;
     background-color: var(--pomegranate);
+    border: 0;
     color: var(--white);
   }
 
@@ -245,7 +265,7 @@ li a {
 
 @media screen and (min-width: 1300px) {
   body {
-    width: 60vw;
+    width: 80vw;
     margin: 0 auto;
   }
 
