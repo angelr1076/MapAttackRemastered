@@ -1,5 +1,5 @@
 import { fetchRestApi } from './fetchCountriesData.js';
-import { initMap } from './mapUtils.js';
+import { initMap, loadGoogleMapsScript } from './mapUtils.js';
 import {
   getScore,
   incrementScore,
@@ -41,7 +41,7 @@ const displayCountryInfo = async countryAlphaCode => {
     What's my name?
   `;
 
-  await initMap(latlng[0], latlng[1]);
+  await loadGoogleMapsScript(latlng[0], latlng[1]);
 
   populateCountryOptions(countryData);
 };
