@@ -1,21 +1,16 @@
-export const loadGoogleMapsScript = () => {
-  const apiKey = window.GOOGLE_MAPS_API_KEY;
+export const loadGoogleMapsScript = async () => {
+  if (document.querySelector('#google-maps-script')) return;
 
-  if (!apiKey) {
-    console.error('Google Maps API key is missing.');
-    return;
-  }
-
-  const script = document.createElement('script');
-  script.id = 'google-maps-script';
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap&libraries=marker&loading=lazy`;
-  script.async = true;
-  script.defer = true;
-
-  script.onerror = error =>
-    console.error('Error loading Google Maps script:', error);
-
-  document.head.appendChild(script);
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.id = 'google-maps-script';
+    script.src = `/.netlify/functions/getGoogleMapsScript`;
+    script.async = true;
+    script.defer = true;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
 };
 
 export const initMap = async (lat, lng) => {
@@ -34,7 +29,12 @@ export const initMap = async (lat, lng) => {
       zoomControl: false,
     });
 
-    new google.maps.Marker({ position: { lat, lng }, map });
+    new google.maps.Marker({
+      position: { lat, lng },
+      map,
+    });
+
+    console.log('Map initialized');
   } catch (error) {
     console.error('Error initializing map:', error);
   }

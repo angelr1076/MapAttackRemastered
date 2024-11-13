@@ -14,4 +14,6 @@ export const incrementWrongAnswers = () => {
 export const resetGame = () => {
   score = 0;
   wrongAnswers = 0;
+  document.querySelector('#wrong-answers').innerHTML = '';
+  document.querySelector('#score').innerHTML = '';
 };

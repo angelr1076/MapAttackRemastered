@@ -1,5 +1,5 @@
 import { fetchRestApi } from './fetchCountriesData.js';
-import { initMap, loadGoogleMapsScript } from './mapUtils.js';
+import { initMap } from './mapUtils.js';
 import {
   getScore,
   incrementScore,
@@ -26,24 +26,22 @@ const displayCountryInfo = async countryAlphaCode => {
     country => country.cca2 === countryAlphaCode
   );
 
-  if (!countryData) {
-    console.error('Country data not found');
-    return;
-  }
+  if (!countryData) return;
 
   selectedCountry = countryData.name.common;
   const { flags, population, subregion, languages, latlng } = countryData;
-  const size = Object.keys(languages).length;
+  const languageCount = Object.keys(languages).length;
 
   document.querySelector('#flag-container img').src = flags.png;
   document.querySelector('#question').innerHTML = `
     I am located in ${subregion}. ${Object.values(languages).join(', ')} 
-${size > 1 ? 'are' : 'is'} my native language${
-    size > 1 ? 's' : ''
+    ${languageCount > 1 ? 'are' : 'is'} my native language${
+    languageCount > 1 ? 's' : ''
   }. My population is ${population.toLocaleString()}. 
     What's my name?
   `;
-  await loadGoogleMapsScript(latlng[0], latlng[1]);
+
+  await initMap(latlng[0], latlng[1]);
 
   populateCountryOptions(countryData);
 };
@@ -132,10 +130,8 @@ const endGame = isWin => {
 
 window.initMap = initMap;
 
-loadGoogleMapsScript();
+initCountriesAPI();
 
 document.querySelector('#inputs').addEventListener('change', event => {
   handleUserResponse(event.target, selectedCountry);
 });
-
-initCountriesAPI();
