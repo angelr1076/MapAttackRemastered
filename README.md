@@ -48,6 +48,9 @@ To run this project locally, follow these steps:
 
 ### Screenshots
 
+![Map Attack Homepage](./images/mapattack_home.png)
+![Map Attack Live](./images/mapattack.png)
+
 ### Additional Notes
 
 Remember to add your Google Maps API key in the .env file. Without it, the map will not render properly. Also, don't forget to add your `.env` file to your `.gitignore` file so you don't accidentally make your API key visible in your github repository.

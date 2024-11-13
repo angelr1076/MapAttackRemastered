@@ -7,7 +7,7 @@ export const loadGoogleMapsScript = async (lat, lng) => {
   const scriptUrl =
     window.location.hostname === 'localhost'
       ? '/getGoogleMapsScript'
-      : `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&callback=initMap&libraries=places&loading=lazy`;
+      : '/.netlify/functions/getGoogleMapsScript';
 
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
