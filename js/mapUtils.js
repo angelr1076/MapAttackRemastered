@@ -1,15 +1,21 @@
-export const loadGoogleMapsScript = async () => {
-  if (document.querySelector('#google-maps-script')) return;
-  return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.id = 'google-maps-script';
-    script.src = `/getGoogleMapsScript`;
-    script.async = true;
-    script.defer = true;
-    script.onload = resolve;
-    script.onerror = reject;
-    document.head.appendChild(script);
-  });
+export const loadGoogleMapsScript = () => {
+  const apiKey = window.GOOGLE_MAPS_API_KEY;
+
+  if (!apiKey) {
+    console.error('Google Maps API key is missing.');
+    return;
+  }
+
+  const script = document.createElement('script');
+  script.id = 'google-maps-script';
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap&libraries=marker&loading=lazy`;
+  script.async = true;
+  script.defer = true;
+
+  script.onerror = error =>
+    console.error('Error loading Google Maps script:', error);
+
+  document.head.appendChild(script);
 };
 
 export const initMap = async (lat, lng) => {

@@ -1,5 +1,5 @@
 import { fetchRestApi } from './fetchCountriesData.js';
-import { initMap } from './mapUtils.js';
+import { initMap, loadGoogleMapsScript } from './mapUtils.js';
 import {
   getScore,
   incrementScore,
@@ -43,7 +43,7 @@ ${size > 1 ? 'are' : 'is'} my native language${
   }. My population is ${population.toLocaleString()}. 
     What's my name?
   `;
-  await initMap(latlng[0], latlng[1]);
+  await loadGoogleMapsScript(latlng[0], latlng[1]);
 
   populateCountryOptions(countryData);
 };
@@ -129,6 +129,10 @@ const endGame = isWin => {
     modal.style.display = 'none';
   };
 };
+
+window.initMap = initMap;
+
+loadGoogleMapsScript();
 
 document.querySelector('#inputs').addEventListener('change', event => {
   handleUserResponse(event.target, selectedCountry);
