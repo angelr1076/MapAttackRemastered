@@ -1,36 +1,55 @@
 # Map Attack Remastered
 
-[Play Map Attack](https://mapattackre.netlify.app/)
+**Play [Map Attack](https://mapattackre.netlify.app/)**
 
-### Here's a remastered version of one of my original boot-camp projects named "Map Attack"
+### About
 
-Changes made:
+This is yet another remastered version of one of my original bootcamp projects, "Map Attack." The goal is simple: save five countries to win! You start with three guesses, and each incorrect guess results in the loss of a country. Good luck and have fun!
 
-1. Broke functions down into separate pieces (initially this was all one function that fired first-class functions)
+### Recent Updates
 
-2. Added some logic and fixed singular/plural issues the user sees as interactive feedback
+1. Refactored Code: Functions were broken down into modular components instead of using one large function with first-class functions.
+2. Improved UI Feedback: Enhanced feedback for users, including better handling of singular/plural messages.
+3. CSS Enhancements: Cleaned up styles and improved responsiveness using Flexbox and CSS Grid.
+4. Updated HTML Structure: Refined HTML element naming for better readability and maintenance.
+5. API Key Handling: Moved Google Maps API handling to a `.env` file.
 
-3. Cleaned up the CSS and added CSS variables
+### Running the Project Locally
 
-4. The game is more responsive now after adding Flexbox and CSS Grid
+To run this project locally, follow these steps:
 
-5. Cleaned up a lot of the HTML element names
+1. Clone the Repository
+   <br>
+   Run the following command in your terminal to clone the repository:
+   <br>
+   `git clone https://github.com/angelr1076/MapAttackRemastered.git`
+2. Install Node.js
+   <br>
+   Make sure you have Node.js installed.
 
-6. Added a .gitignore file to hide Google Maps API key
+3. Install Dependencies
+   <br>
+   Navigate to the project directory and install dependencies by running:
+   <br>
+   `npm install`
+4. Set Up Environment Variables
+   <br>
+   Create a `.env` file in the root folder to securely manage your Google Maps API key. Add the following line to your `.env` file:
+   <br>
+   `GOOGLE_MAPS_API_KEY=your-google-maps-api-key`
 
-If you'd like to clone the game, run "git clone https://github.com/angelr1076/MapAttackRemastered.git" in the terminal.
+5. Run the Game
+   To start the game locally, use the following command:
+   `npm run dev`
+   This will start the server on http://localhost:3000 using nodemon to monitor changes and auto-restart the server.
 
-Install Node on your machine, you can do that from the command line or directly from [Node](https://nodejs.org/en/download/). There are plenty of resources out there explaining how to install Node on your machine so I'll save myself some time and space here. The game runs locally on a Node.js server (port 3000).
+6. Deploying the Game
+   The game uses a Node.js server and runs on port 3000 locally. Make sure your `.env` file contains your API key before deploying. If you don’t have a Google Maps API key, get one from Google Maps API key site.
 
-You'll need to create a config.js file in your root folder with the following variables in order to dynamically insert the Google Maps API key into your header:
-`let head = document.getElementsByTagName("head").item(0); let script = document.createElement("script"); script.setAttribute("type", "text/javascript"); script.setAttribute( "src", "<YOUR GOOGLE MAPS API KEY>" ); head.appendChild(script);`
+### Screenshots
 
-Remember to add your Google Maps API key, otherwise the site will not deploy and the map will not render. If you don't already have an API key, go to [Google Maps API key site](https://developers.google.com/maps/documentation/javascript/get-api-key).
+### Additional Notes
 
-Once you clone the repository and install Node, you can run the game locally on a Node.js server by entering "npm run start" in the terminal.
-
-![Game Image](./images/gamescreen.png)
-
-![Mobile Image](./images/mobile.png)
-
-![Tablet Image](./images/tablet.png)
+Remember to add your Google Maps API key in the .env file. Without it, the map will not render properly. Also, don't forget to add your `.env` file to your `.gitignore` file so you don't accidentally make your API key visible in your github repository.
+For production deployments, ensure your environment variables are configured to securely pass the API key to the application.
+If you’d like to restart the game without refreshing, use the “Play Again” button on the modal after each game.
