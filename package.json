@@ -1,15 +1,16 @@
 {
-  "name": "mapattackremastered",
-  "version": "2.0.0",
+  "name": "Map Attack Remastered",
+  "version": "3.0.0",
   "description": "Remastered version of MapAttack",
   "main": "config.js",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon server.js",
     "start": "node server.js"
   },
   "author": "Angel Rodriguez",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.17.1",
     "negotiator": "^0.6.2",
     "nodemon": "^2.0.4"
