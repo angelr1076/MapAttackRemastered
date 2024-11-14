@@ -1,8 +1,6 @@
 # Map Attack Remastered
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/abff86cf-dea7-4372-84f4-b8733d798993/deploy-status)](https://app.netlify.com/sites/mapattackre/deploys)
-
-**Play [Map Attack](https://mapattackre.netlify.app/)**
+**Play [Map Attack](https://mapattackremastered-production.up.railway.app/)**
 
 ### About
 
