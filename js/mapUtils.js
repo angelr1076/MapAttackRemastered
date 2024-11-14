@@ -4,10 +4,7 @@ export const loadGoogleMapsScript = async (lat, lng) => {
     return;
   }
 
-  const scriptUrl =
-    window.location.hostname === 'localhost'
-      ? '/getGoogleMapsScript'
-      : '/.netlify/functions/getGoogleMapsScript';
+  const scriptUrl = '/getGoogleMapsScript';
 
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');

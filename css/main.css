@@ -331,6 +331,17 @@ li a {
   .item-type-b__inputs label {
     font-size: 1rem;
   }
+
+  footer {
+    background-color: var(--charcoal);
+    border-radius: 0 0 5px 5px;
+    padding: 10px 0;
+  }
+
+  .sig {
+    color: var(--white);
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (min-width: 600px) {
