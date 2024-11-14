@@ -21,7 +21,7 @@ export const loadGoogleMapsScript = async (lat, lng) => {
     };
     script.onerror = error => {
       console.error('Error loading Google Maps script:', error);
-      reject(new Error(`Failed to load Google Maps script from ${scriptUrl}`));
+      reject(error);
     };
     document.head.appendChild(script);
   });

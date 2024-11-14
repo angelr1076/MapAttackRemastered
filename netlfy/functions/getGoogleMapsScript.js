@@ -10,14 +10,25 @@ exports.handler = async function (event, context) {
     };
   }
 
-  const googleMapsScriptUrl = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap&libraries=places&loading=lazy`;
+  const googleMapsScriptUrl = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&callback=initMap&loading=lazy`;
 
-  return {
-    statusCode: 302,
-    headers: {
-      Location: googleMapsScriptUrl,
-      'Cache-Control': 'no-cache',
-      'Access-Control-Allow-Origin': '*',
-    },
-  };
+  try {
+    const response = await fetch(googleMapsScriptUrl);
+    const script = await response.text();
+
+    return {
+      statusCode: 200,
+      headers: {
+        'Content-Type': 'application/javascript',
+        'Cache-Control': 'no-store',
+      },
+      body: script,
+    };
+  } catch (error) {
+    console.error('Error fetching Google Maps script:', error);
+    return {
+      statusCode: 500,
+      body: 'Error fetching Google Maps script',
+    };
+  }
 };
