@@ -16,6 +16,8 @@ exports.handler = async function (event, context) {
     statusCode: 302,
     headers: {
       Location: googleMapsScriptUrl,
+      'Cache-Control': 'no-cache',
+      'Access-Control-Allow-Origin': '*',
     },
   };
 };
