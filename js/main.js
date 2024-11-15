@@ -86,6 +86,7 @@ const handleUserResponse = (element, correctAnswer) => {
       endGame(true);
       return;
     }
+    loadNewCountry();
   } else {
     incrementWrongAnswers();
     document.querySelector(
@@ -95,9 +96,18 @@ const handleUserResponse = (element, correctAnswer) => {
       endGame(false);
       return;
     }
-  }
 
-  loadNewCountry();
+    const correctAnswerMessage = document.getElementById(
+      'correctAnswerMessage'
+    );
+    correctAnswerMessage.textContent = `The correct answer was: ${correctAnswer}`;
+    correctAnswerMessage.style.display = 'block';
+
+    setTimeout(() => {
+      correctAnswerMessage.style.display = 'none';
+      loadNewCountry();
+    }, 2000);
+  }
 };
 
 const loadNewCountry = () => {
@@ -113,7 +123,7 @@ const endGame = isWin => {
 
   modalMessage.textContent = isWin
     ? 'Congratulations! You won!'
-    : 'Game over! Try again!';
+    : 'Game over! Try again.';
 
   modal.style.display = 'flex';
 
