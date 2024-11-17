@@ -100,7 +100,7 @@ const handleUserResponse = (element, correctAnswer) => {
     const correctAnswerMessage = document.getElementById(
       'correctAnswerMessage'
     );
-    correctAnswerMessage.textContent = `The correct answer was: ${correctAnswer}`;
+    correctAnswerMessage.textContent = `The correct answer was ${correctAnswer}.`;
     correctAnswerMessage.style.display = 'block';
 
     setTimeout(() => {
@@ -123,7 +123,7 @@ const endGame = isWin => {
 
   modalMessage.textContent = isWin
     ? 'Congratulations! You won!'
-    : 'Game over! Try again.';
+    : `Game over! The correct answer was ${selectedCountry}`;
 
   modal.style.display = 'flex';
 
