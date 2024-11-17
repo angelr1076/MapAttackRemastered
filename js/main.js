@@ -123,7 +123,7 @@ const endGame = isWin => {
 
   modalMessage.textContent = isWin
     ? 'Congratulations! You won!'
-    : `Game over! The correct answer was ${selectedCountry}`;
+    : `Game over! The correct answer was ${selectedCountry}.`;
 
   modal.style.display = 'flex';
 
