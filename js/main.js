@@ -25,21 +25,25 @@ const displayCountryInfo = async countryAlphaCode => {
   const countryData = countries.find(
     country => country.cca2 === countryAlphaCode
   );
+  console.log(countryData);
 
   if (!countryData) return;
 
   selectedCountry = countryData.name.common;
-  const { flags, population, subregion, languages, latlng } = countryData;
+  const { capital, flags, population, subregion, languages, latlng } =
+    countryData;
   const languageCount = Object.keys(languages).length;
+  const capitalCount = capital ? Object.keys(capital).length : 0;
 
   document.querySelector('#flag-container img').src = flags.png;
   document.querySelector('#question').innerHTML = `
-    I am located in ${subregion}. ${Object.values(languages).join(', ')} 
-    ${languageCount > 1 ? 'are' : 'is'} my native language${
-    languageCount > 1 ? 's' : ''
-  }. My population is ${population.toLocaleString()}. 
-    What's my name?
-  `;
+  I am located in ${subregion === 'Caribbean' ? 'the' : ''} ${subregion}. ${
+    capital && capitalCount > 0
+      ? `${Object.values(capital).join(', ')} ${
+          capitalCount > 1 ? 'are' : 'is'
+        } my capital ${capitalCount > 1 ? 'cities' : 'city'}`
+      : 'I have no official capital city'
+  }. My population is ${population.toLocaleString()}.`;
 
   await loadGoogleMapsScript(latlng[0], latlng[1]);
 
