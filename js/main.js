@@ -10,6 +10,8 @@ import {
 
 let countries = [];
 let selectedCountry = '';
+const yearElement = document.getElementById('year');
+yearElement.textContent = new Date().getFullYear();
 
 const initCountriesAPI = async () => {
   try {
