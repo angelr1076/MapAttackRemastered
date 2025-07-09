@@ -17,6 +17,7 @@ const initCountriesAPI = async () => {
   try {
     countries = await fetchRestApi();
     const selectedCountryIndex = Math.floor(Math.random() * countries.length);
+    console.log(countries);
     displayCountryInfo(countries[selectedCountryIndex].cca2);
   } catch (error) {
     console.error('Error fetching countries data:', error);

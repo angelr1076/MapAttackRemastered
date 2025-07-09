@@ -14,7 +14,7 @@ app.get('/getGoogleMapsScript', (req, res) => {
   }
 
   res.redirect(
-    `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&callback=initMap&loading=lazy`
+    `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&callback=initMap&loading=async`
   );
 });
 
