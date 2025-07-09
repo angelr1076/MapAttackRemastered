@@ -1,7 +1,5 @@
 # Map Attack Remastered
 
-**Play [Map Attack](https://mapattackremastered-production.up.railway.app/)**
-
 ### About
 
 This is yet another remastered version of one of my original bootcamp projects, "Map Attack." The goal is simple: save five countries to win! You start with three guesses, and each incorrect guess results in the loss of a country. Good luck and have fun!
