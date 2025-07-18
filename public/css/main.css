@@ -4,6 +4,7 @@
   --pomegranate: #f95959;
   --pomegranate-light: #fa7c7c;
   --white: #fff;
+  --black: #000;
   --offwhite: #faf9f6;
   --charcoal: #444;
   --key-lime: #4c4;
@@ -346,6 +347,12 @@ li a {
 
 .correct-answer-message {
   display: none;
+}
+
+.modal-message {
+  color: var(--black);
+  font-size: 1.2rem;
+  margin: 20px 0;
 }
 
 .sig {
