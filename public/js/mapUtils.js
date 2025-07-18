@@ -4,8 +4,7 @@ export const loadGoogleMapsScript = async (lat, lng) => {
     return;
   }
 
-  const scriptUrl =
-    'https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap&loading=async';
+  const scriptUrl = '/maps-proxy';
 
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
