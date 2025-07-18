@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Map Attack Remastered</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./images/globe.png" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div id="flag-container" class="flag-container">
+        <img class="item-img" id="country-flag" src="" alt="flag" />
+      </div>
+    </header>
+    <nav>
+      <ul class="container-nav">
+        <li class="home"><a href="index.html">Home</a></li>
+        <li class="replay"><a href="main.html">Replay</a></li>
+      </ul>
+    </nav>
+    <div class="container-main" id="container-main">
+      <div class="item map" id="map"></div>
+      <div class="item container-inner">
+        <div class="item-inner score" id="score"></div>
+        <div class="item-inner wrong-answers" id="wrong-answers"></div>
+        <span class="item-inner correct-answer-message" id="correctAnswerMessage"></span>
+      </div>
+      <div class="item item-type-b" id="question"></div>
+      <div class="item item-type-b">
+        <form class="item item-type-b__inputs" id="inputs"></form>
+      </div>
+      <div class="countries-no-display">
+        <select id="countries" title="dropdown list of countries"></select>
+        <div id="population"></div>
+        <div id="currencies"></div>
+        <div id="languages"></div>
+      </div>
+    </div>
+    <div class="container-footer">
+      <div id="game-end">
+        <footer class="sig">Map Attack &#169; <span id='year'></span></footer>
+      </div>
+    </div>
+    <div id="endGameModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+        <h2 id="modalMessage"></h2>
+        <button class="play-again" id="playAgain" type="button">Play Again</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
