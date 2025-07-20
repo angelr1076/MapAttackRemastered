@@ -12,6 +12,9 @@ let countries = [];
 let selectedCountry = '';
 const yearElement = document.getElementById('year');
 yearElement.textContent = new Date().getFullYear();
+const pomegranate = '#f95959';
+const pomegranateLight = '#fa7c7c';
+const white = '#fff';
 
 const inputsActive = () => {
   const inputs = document.querySelectorAll('#inputs input');
@@ -20,8 +23,8 @@ const inputsActive = () => {
     input.disabled = false;
   });
   bInputs.forEach(input => {
-    input.style.backgroundColor = '#f95959';
-    input.style.color = '#fff';
+    input.style.backgroundColor = pomegranate;
+    input.style.color = white;
   });
 };
 
@@ -32,8 +35,8 @@ const inputsDisabled = () => {
     input.disabled = true;
   });
   bInputs.forEach(input => {
-    input.style.backgroundColor = '#000';
-    input.style.color = '#000';
+    input.style.backgroundColor = pomegranateLight;
+    input.style.color = pomegranateLight;
   });
 };
 
@@ -47,20 +50,11 @@ const initCountriesAPI = async () => {
   }
 };
 
-const displayCountryInfo = async countryAlphaCode => {
-  const countryData = countries.find(
-    country => country.cca2 === countryAlphaCode
-  );
-
-  if (!countryData) return;
-
-  selectedCountry = countryData.name.common;
-  const { capital, flags, population, subregion, languages, latlng } =
-    countryData;
-  const languageCount = Object.keys(languages).length;
-  const capitalCount = capital ? Object.keys(capital).length : 0;
-
+const getFlags = flags => {
   document.querySelector('#flag-container img').src = flags.png;
+};
+
+const question = (subregion, capital, population, capitalCount) => {
   document.querySelector('#question').innerHTML = `
   I am located in ${subregion === 'Caribbean' ? 'the' : ''} ${subregion}. ${
     capital && capitalCount > 0
@@ -69,9 +63,23 @@ const displayCountryInfo = async countryAlphaCode => {
         } my capital ${capitalCount > 1 ? 'cities' : 'city'}`
       : 'I have no official capital city'
   }. My population is ${population.toLocaleString()}.`;
+};
+
+const displayCountryInfo = async countryAlphaCode => {
+  const countryData = countries.find(
+    country => country.cca2 === countryAlphaCode
+  );
+
+  if (!countryData) return;
+
+  selectedCountry = countryData.name.common;
+  const { capital, flags, population, subregion, latlng } = countryData;
+  const capitalCount = capital ? Object.keys(capital).length : 0;
+
+  getFlags(flags);
+  question(subregion, capital, population.toLocaleString(), capitalCount);
 
   await loadGoogleMapsScript(latlng[0], latlng[1]);
-
   populateCountryOptions(countryData);
 };
 
