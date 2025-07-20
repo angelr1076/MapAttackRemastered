@@ -13,6 +13,30 @@ let selectedCountry = '';
 const yearElement = document.getElementById('year');
 yearElement.textContent = new Date().getFullYear();
 
+const inputsActive = () => {
+  const inputs = document.querySelectorAll('#inputs input');
+  const bInputs = document.querySelectorAll('.item-type-b__inputs');
+  inputs.forEach(input => {
+    input.disabled = false;
+  });
+  bInputs.forEach(input => {
+    input.style.backgroundColor = '#f95959';
+    input.style.color = '#fff';
+  });
+};
+
+const inputsDisabled = () => {
+  const inputs = document.querySelectorAll('#inputs input');
+  const bInputs = document.querySelectorAll('.item-type-b__inputs');
+  inputs.forEach(input => {
+    input.disabled = true;
+  });
+  bInputs.forEach(input => {
+    input.style.backgroundColor = '#000';
+    input.style.color = '#000';
+  });
+};
+
 const initCountriesAPI = async () => {
   try {
     countries = await fetchRestApi();
@@ -79,6 +103,7 @@ const populateCountryOptions = correctCountry => {
     .join('');
 
   document.querySelector('#inputs').innerHTML = optionsHTML;
+  inputsActive();
 };
 
 const handleUserResponse = (element, correctAnswer) => {
@@ -88,6 +113,7 @@ const handleUserResponse = (element, correctAnswer) => {
     incrementScore();
     document.querySelector('#score').innerHTML = `Score: ${getScore()}`;
     if (getScore() >= 5) {
+      inputsDisabled();
       endGame(true);
       return;
     }
@@ -97,6 +123,9 @@ const handleUserResponse = (element, correctAnswer) => {
     document.querySelector(
       '#wrong-answers'
     ).innerHTML = `Wrong Answers: ${getWrongAnswers()}`;
+
+    inputsDisabled();
+
     if (getWrongAnswers() >= 3) {
       endGame(false);
       return;
